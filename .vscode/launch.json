@@ -1,0 +1,32 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+    {
+      "name": "Run Server",
+      "request": "launch",
+      "runtimeArgs": [
+        "${workspaceFolder}/src/app/server.js"
+      ],
+      "runtimeExecutable": "node",
+      "skipFiles": [
+        "<node_internals>/**"
+      ],
+      "type": "node"
+    },
+      {
+        "type": "node",
+        "request": "launch",
+        "name": "Mocha Tests",
+        "program": "${workspaceFolder}/node_modules/mocha/bin/_mocha",
+        "args": ["${workspaceFolder}/test/**/*.js"],
+        "cwd": "${workspaceFolder}",
+        "console": "integratedTerminal",
+        "internalConsoleOptions": "neverOpen",
+        "outputCapture": "std",
+        "stopOnEntry": false,
+        "runtimeExecutable": null,
+        "env": {}
+      }
+    ]
+  }
+  
